@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Recipe</title>
+</head>
+<body>
+  <h1>Add Recipe</h1>
+  <form action="/addRecipe" method="POST">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+    
+    <label for="ingredients">Ingredients:</label><br>
+    <textarea id="ingredients" name="ingredients" rows="4" cols="50" required></textarea><br><br>
+    
+    <label for="instructions">Instructions:</label><br>
+    <textarea id="instructions" name="instructions" rows="8" cols="50" required></textarea><br><br>
+    
+    <label for="note">Note:</label><br>
+    <input type="text" id="note" name="note"><br><br>
+    
+    <label for="prepTime">Preparation Time (in minutes):</label><br>
+    <input type="number" id="prepTime" name="prepTime" required><br><br>
+    
+    <label for="author">Author:</label><br>
+    <input type="text" id="author" name="author" required><br><br>
+    
+    <button type="submit">Add Recipe</button>
+  </form>
+</body>
+</html>
