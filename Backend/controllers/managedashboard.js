@@ -2,7 +2,7 @@ const path = require('path');
 const User = require('../models/user');
 
 exports.getdashboardPage = async (req, res) => {
-  const userId = req.cookies.user._Id;
+  const userId = req.cookies.userId;
   console.log(userId);
 
   if (!userId) {
