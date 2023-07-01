@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: 'https://ff-flavor-fusion.onrender.com',
+  origin: true,
   credentials: true,
 };
 
