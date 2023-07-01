@@ -3,6 +3,7 @@ const User = require('../models/user');
 
 exports.getdashboardPage = async (req, res) => {
   const userId = req.cookies.user._Id;
+  console.log(userId);
 
   if (!userId) {
     // User is not logged in, redirect to login page or handle unauthorized access
@@ -12,7 +13,6 @@ exports.getdashboardPage = async (req, res) => {
   try {
     // Fetch user data based on the userId
     const user = await User.findById(userId);
-
     if (!user) {
       console.log('User not found');
       return res.send('Login first');
