@@ -2,7 +2,7 @@ const path = require('path');
 const User = require('../models/user');
 
 exports.getdashboardPage = async (req, res) => {
-  const userId = req.cookies.userId;
+  const userId = req.query.userId;
 
   if (!userId) {
     // User is not logged in, redirect to login page or handle unauthorized access
