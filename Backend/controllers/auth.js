@@ -44,8 +44,9 @@ exports.login = async (req,res) =>{
         user.token = token;
         await user.save();
 
-        res.cookie('userId', user._id);
-        res.cookie('token', token);
+        res.cookie('userId', newUser._id, { httpOnly: true, secure: true });
+res.cookie('token', token, { httpOnly: true, secure: true });
+
         res.status(200).json({ message: 'Login successful', userId: user._id });
       }
       else
