@@ -1,5 +1,10 @@
 const path = require('path');
 const User = require('../models/user');
+const express = require('express');
+const cookieParser = require('cookie-parser');
+
+const app = express();
+app.use(cookieParser());
 
 exports.getdashboardPage = async (req, res) => {
   const userId = req.cookies.userId;
