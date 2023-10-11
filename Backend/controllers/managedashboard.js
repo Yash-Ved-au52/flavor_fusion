@@ -8,7 +8,7 @@ app.use(cookieParser());
 
 exports.getdashboardPage = async (req, res) => {
 
-  const userId = req.body;
+  const userId = req.params.userId;
   console.log(userId);
 
   if (!userId) {
