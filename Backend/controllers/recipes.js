@@ -37,7 +37,7 @@ exports.addToCollection = async (req, res) => {
       const recipeId  = req.query.recipeId;
 
   console.log(userId);
-  console.log(recipeId);
+  // console.log(recipeId);
   
       // Find the user by ID
       const user = await User.findById(userId);
