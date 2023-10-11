@@ -22,7 +22,7 @@ exports.signUp = async (req, res) =>{
     await newUser.save();
     res.cookie('userId', newUser._id);
     res.cookie('token', token);
-    res.status(200).json({ message: 'Sign up successful',userId: User._id});
+    res.status(200).json({ message: 'Sign up successful',userId: newUser._id});
   } catch (error){
     console.error(error);
     res.status(500).json({ message: 'An error occurred. Please try again.' });
@@ -46,7 +46,7 @@ exports.login = async (req,res) =>{
 
         res.cookie('userId', user._id);
         res.cookie('token', token);
-        res.status(200).json({ message: 'Login successful', userId: User._id});
+        res.status(200).json({ message: 'Login successful', userId: user._id});
       }
       else
       {

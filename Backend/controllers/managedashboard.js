@@ -25,7 +25,7 @@ exports.getdashboardPage = async (req, res) => {
     }
 
     // Send user ID and name in the response
-    res.json({ userId: user._id, name: user.name, collection : user.myCollection });
+    res.json({ name: user.name, collection : user.myCollection });
 
   } catch (error) {
     console.error('Error fetching user data:', error);
