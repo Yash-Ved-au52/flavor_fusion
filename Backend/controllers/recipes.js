@@ -33,8 +33,8 @@ exports.addRecipe =  async (req,res) => {
 exports.addToCollection = async (req, res) => {
     try {
   //     const { cookies } = req;
-  const userId = req.params.userId;
-      const recipeId  = req.params.recipeId;
+  const userId = req.body.userId;
+      const recipeId  = req.body.recipeId;
 
   console.log(userId);
   // console.log(recipeId);
